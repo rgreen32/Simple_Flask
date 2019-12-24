@@ -5,7 +5,7 @@ import io
 import requests
 
 nasa_api_key="NLrGq98UqsydqrbBJTkLnycjmrnR7ooDtgAlhZHk"
-@app.route("/")
+@app.route("/space")
 def get_image():
     response = requests.get("https://api.nasa.gov/planetary/apod?api_key={}".format(nasa_api_key)).json()
     image_response = requests.get(response["url"])
